@@ -76,7 +76,7 @@ export default function FleetView({
     }
 
     const source = map.getSource(SOURCE_ID) as GeoJSONSource | undefined
-    source?.setData(dataPoints)
+    source?.setData(dataPoints as GeoJSON.FeatureCollection)
   }, [dataPoints])
 
   return (
