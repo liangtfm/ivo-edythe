@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server'
 
+// Endpoint to open a SSE connection and stream mock fleet updates every second to the frontend
 export async function GET(request: NextRequest) {
   const { event, data } = await request.json()
 

@@ -1,3 +1,8 @@
+/**
+ * Dashboard handles fetching the sensor data and passing it to children components
+ * TODO:
+ *   - Set up SSE connection for `real-time` updates.
+ */
 'use client'
 
 import React from 'react'

@@ -1,3 +1,11 @@
+/**
+ * FleetView component displays the sensors on a <map name="
+ *
+ * TODO:
+ *  - Display sensors as color-coded circles depending on the status.
+ *  - Update the map when new sensor data arrives.
+ *  - Make sure sectors and clustering works.
+ */
 'use client'
 
 import maplibre, { type GeoJSONSource, type Map as MLMap } from 'maplibre-gl'

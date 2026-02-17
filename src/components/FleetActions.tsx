@@ -1,3 +1,15 @@
+/**
+ * FleetActions component displays a data grid of all sensors in the fleet and
+ * allows users to select multiple sensors and perform actions on them.
+ *
+ * TODO:
+ *   - Implement the click action for the buttons plus an extra temperature input
+ *     for `set temperature` button.
+ *   - Click actions also need to send a POST to the telemetry endpoint with
+ *     time lapsed since the data point appeared.
+ *   - Update table when data changes or map view changes with only the visible
+ *     data points.
+ */
 'use client'
 
 import {
