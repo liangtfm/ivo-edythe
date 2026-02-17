@@ -9,6 +9,8 @@ Create a real-time heatmap of 10000 sensors with the ability for the user to tak
 ```
 bun install
 
+bun generate-mock-data
+
 bun dev
 ```
 
