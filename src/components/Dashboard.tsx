@@ -28,7 +28,7 @@ export default function Dashboard() {
         <h1 className='text-3xl text-center font-bold'>Fleet Dashboard</h1>
       </div>
       <FleetView fleetData={fleetData} />
-      <FleetActions />
+      <FleetActions fleetData={fleetData} />
     </div>
   )
 }
