@@ -1,0 +1,2 @@
+- [x] simulate sector failure
+- [x] report telemetry on how much time it takes the operator to fix the problem on the frontend

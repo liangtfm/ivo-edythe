@@ -1,10 +1,21 @@
-import { type NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from "next/server";
+import type { PlatformTelemetryEvent } from "@/types";
 
 // Endpoint to receive telemetry data from the frontend and log it for now
 export async function POST(request: NextRequest) {
-  const { event, data } = await request.json()
+  const payload = (await request.json()) as Partial<PlatformTelemetryEvent>;
 
-  console.log(`Received telemetry event: ${event}`, data)
+  if (payload.event !== "fleet_command_executed" || !payload.data) {
+    return NextResponse.json(
+      { error: "Unsupported telemetry event payload" },
+      { status: 400 },
+    );
+  }
 
-  return NextResponse.json({ status: 'telemetry success' })
+  console.log("Received telemetry event", payload);
+
+  return NextResponse.json({
+    status: "accepted",
+    receivedAt: new Date().toISOString(),
+  });
 }
